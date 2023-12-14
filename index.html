@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Projetos HTML</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1 {
+            color: #555;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <h1>Meus Projetos HTML</h1>
+    <ul id="project-list"></ul>
+
+    <script>
+        // Array de projetos
+        var projects = [
+            { name: "Color Flipper", path: "./01 - Color Flipper/index.html" },
+            { name: "Contador", path: "./02 - Contador/index.html" },
+            { name: "Carrosel de Revisões", path: "./03 - Carrosel de revisóes/index.html" },
+            { name: "Navbar Responsiva", path: "./" },
+            { name: "Sidebar", path: "./" },
+            { name: "Modal", path: "./" },
+            { name: "Pagina de perguntas", path: "./" },
+            { name: "Pagina menu de restaurante", path: "./" },
+            { name: "Segundo plano de video", path: "./" },
+            { name: "Barra de navegação com rolagem", path: "./" },
+            { name: "Guias de conteudo diversos", path: "./" },
+            { name: "Cronometro regressivo", path: "./" },
+            { name: "My Lorem ipsum", path: "./" },
+            { name: "Lista de compras", path: "./" },
+            { name: "Slide de imagens", path: "./" },
+            { name: "Pedra papel tesoura", path: "./" },
+            { name: "Genius", path: "./" },
+            { name: "Plataforma game", path: "./" },
+            { name: "Doodle Jump", path: "./" },
+            { name: "Flappy Bird", path: "./" },
+            { name: "Jogo da memoria", path: "./" },
+            { name: "Whack-a-mole", path: "./" },
+            { name: "Ligue 4", path: "./" },
+            { name: "Snake game", path: "./" },
+            { name: "Space Invaders", path: "./" },
+            { name: "Frogger", path: "./" },
+            { name: "Tetris", path: "./" },
+            // Adicione mais projetos conforme necessário
+        ];
+
+        // Função para gerar a lista de projetos
+        function generateProjectList() {
+            var projectList = document.getElementById("project-list");
+
+            projects.forEach(function(project) {
+                var listItem = document.createElement("li");
+                var link = document.createElement("a");
+                link.href = project.path;
+                link.target = "_blank";
+                link.textContent = project.name;
+
+                listItem.appendChild(link);
+                projectList.appendChild(listItem);
+            });
+        }
+
+        // Chama a função para gerar a lista ao carregar a página
+        generateProjectList();
+    </script>
+</body>
+</html>
